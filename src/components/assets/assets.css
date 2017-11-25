@@ -1,0 +1,22 @@
+.assets .table-row-child:nth-child(2){
+    flex: 2;
+}
+
+.asset-tags {
+    overflow: scroll;
+    display: flex;
+    flex-direction: row;
+}
+
+.asset-tag {
+    background-color: #cde69c;
+    border-radius: 2px;
+    border: 1px solid #a5d24a;
+    color: #638421;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    margin-right: 5px;
+    padding: 5px;
+}

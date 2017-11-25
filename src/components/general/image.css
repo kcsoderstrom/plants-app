@@ -1,0 +1,15 @@
+.image-container.visible > img {
+    /*position: relative;*/
+    opacity: 1;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container > img {
+    opacity: 0;
+    transition: opacity 0.2s;
+    min-width: 100%;
+    min-height: 100%;
+}

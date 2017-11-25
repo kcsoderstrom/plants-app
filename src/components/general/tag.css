@@ -1,0 +1,10 @@
+.sightworthy-tag {
+    display: flex;
+}
+
+.sightworthy-tag-close {
+    margin-left: 13px;
+    width: 10px;
+    height: 20px;
+    cursor: pointer;
+}

@@ -1,0 +1,11 @@
+/* plop v1 */
+.content-container {
+    padding-bottom: 48px;
+    flex: 1;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .content-container {
+        width: 100%;
+    }
+}

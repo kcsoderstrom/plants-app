@@ -1,0 +1,43 @@
+.component-drop-down {
+  position: relative; 
+}
+
+.component-drop-down.showing > .drop-down-list-container {
+    display: block; 
+}
+
+.drop-down-list-item {
+    list-style-type: none; 
+}
+
+.drop-down-list {
+    margin: 0;
+    padding: 0; 
+}
+
+.drop-down-list-container {
+    display: flex;
+    flex-direction: column;
+    display: none;
+    position: absolute;
+    background: transparent;
+    padding: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    overflow-x: visible;
+    margin-bottom: 0;
+    z-index: 1; 
+}
+.drop-down-list-container.direction-down {
+    top: 101%;
+    justify-content: flex-end; 
+}
+.drop-down-list-container.direction-up {
+    bottom: 100%;
+    justify-content: flex-end; 
+}
+
+.component-drop-down .error-message {
+    position: absolute; 
+}

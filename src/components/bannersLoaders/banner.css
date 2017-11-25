@@ -1,0 +1,42 @@
+.banner.error {
+    color: #a94442;
+    border-color: #a94442;
+    background: #f2dede;
+}
+
+.banner.success .error-banner {
+    background-color: #3c763d;
+    color: #dff0d8;
+}
+
+.banner.visible {
+    transform: translateY(-10%);
+    opacity: 1;
+    visibility: visible;
+    height: 55px;
+}
+
+.banner-close {
+    position: relative;
+    right: -30px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.banner-container {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    justify-content: space-between;
+    padding: 0 40px;
+    width: 100%;
+}
+
+.banner {
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 0;
+    transform: translateY(-100%);
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

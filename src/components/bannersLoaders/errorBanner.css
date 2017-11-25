@@ -1,0 +1,13 @@
+/* plop v1 */
+.error-banner p {
+    color: #fff;
+}
+
+.error-banner {
+    height: 55px;
+    background-color: #f4451a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

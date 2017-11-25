@@ -1,0 +1,11 @@
+.app {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+}
+
+.nav-container {
+    width: 100%;
+}
