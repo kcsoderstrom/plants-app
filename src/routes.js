@@ -19,7 +19,7 @@ export const routePaths = {
 
 export const routeToAfterLogin = routePaths.viewProjects;
 
-const AuthRoute = ({ component: Component, ...rest }) => (
+export const AuthRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => {
     const state = store.getState();
     const isAuthorized = state.session.isLoggedIn

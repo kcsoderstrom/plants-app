@@ -1,7 +1,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import  * as Session from '../../actions/session';
+// import  * as Session from '../../actions/session';
 import ErrorBanner from './errorBanner';
 
 import './banner.css';
@@ -51,7 +51,7 @@ class Login extends React.Component {
             isRequestSuccess,
             message,
             className,
-            errorsOnly
+            // errorsOnly
         } = this.props;
 
         const { isVisible } = this.state;

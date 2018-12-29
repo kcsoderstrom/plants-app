@@ -6,9 +6,9 @@ import { register } from './store/storeInstance';
 import configureStore from './store/configureStore';
 import saveStateToStorage from './store/saveState';
 import { loadSessionState, loadLocalState } from './store/localStorage'
-import { preLoadImages } from './helpers/imagePreLoad';
-import values from 'lodash/values';
-import content from './content';
+// import { preLoadImages } from './helpers/imagePreLoad';
+// import values from 'lodash/values';
+// import content from './content';
 
 import './fonts.css';
 

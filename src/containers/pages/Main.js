@@ -2,22 +2,24 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import AppContainer from '../../components/AppContainer';
-import { routeToAfterLogin, routePaths } from '../../routes';
+import QuestionPage from '../../components/QuestionPage';
+// import { routeToAfterLogin, routePaths } from '../../routes';
+import { routeToAfterLogin } from '../../routes';
 
 const MainPage = props => {
-    const { history, navigateLocation } = props;
-    const navigateAfterLogin = () => history.push(routePaths.viewProjects)
-    return (
-        <AppContainer>
-            Main page
-        </AppContainer>
-    )
+  // const { history } = props;
+  // const navigateAfterLogin = () => history.push(routePaths.viewProjects)
+  return (
+    <AppContainer>
+      <QuestionPage/>
+    </AppContainer>
+  )
 }
 
 
 const mapStateToProps = (state) => {
   return {
-      navigateLocation: state.session.loginAttemptRoute || routeToAfterLogin
+    navigateLocation: state.session.loginAttemptRoute || routeToAfterLogin
   };
 };
 

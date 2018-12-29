@@ -4,14 +4,14 @@ import './AppContainer.css';
 
 
 class App extends Component {
-    render() {
-        return (
-            <div className="app">
-                <Banner/>
-                    {this.props.children}
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className="app">
+        <Banner/>
+        {this.props.children}
+      </div>
+    );
+  }
 }
 
 
