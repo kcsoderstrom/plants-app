@@ -1,11 +1,12 @@
-import * as plants from '../constants/plants.json';
+import * as plants from '../constants/plants2.json';
 import questions from '../constants/questions';
 import _ from 'lodash';
 
 const getFilteredPlants = (filters, filteredPlants = plants) => {
   return _.filter(filteredPlants, plant => {
-    if(!plant.data) return false; // TODO: make sure this doesn't happen for any of the plants!
-    const plantData = plant.data[0];
+    // if(!plant.data) return false; // TODO: make sure this doesn't happen for any of the plants!
+    // const plantData = plant.data[0];
+    const plantData = plant; // TODO: clean this up
 
     return _.every(Object.keys(filters), (key) => {
       // needs to be every item doesn't match if it is about not matching,
@@ -13,6 +14,7 @@ const getFilteredPlants = (filters, filteredPlants = plants) => {
       // return _.every(Object.keys(filters[key]), (value) => {
         // const { filterMatches, partialMatchOK } = filters[key][value]
         const { filterMatches, partialMatchOK, value } = filters[key];
+
         if(partialMatchOK && typeof(value) === 'string') {
           // TODO: this could give weird bugs with partial word just flagging that is all
           return !!plantData[key] && (plantData[key].indexOf(value) !== -1) === filterMatches;
@@ -45,7 +47,7 @@ export const getBestNextQuestion = (plants, usedQuestions) => {
   const maxRemainingGroupSizes = unusedQuestions.map(question => {
     const remainingGroupSizes = question.options.map(option => {
       const filters = getFilterForOption(question, option);
-      return getFilteredPlants(filters, plants).length;
+      return _.size(getFilteredPlants(filters, plants));
     });
 
     return Math.max(...remainingGroupSizes);
